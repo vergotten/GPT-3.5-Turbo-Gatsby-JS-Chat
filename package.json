@@ -16,7 +16,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^1.10.1",
     "gatsby": "^5.9.0",
+    "gatsby-plugin-support-chat": "^0.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
