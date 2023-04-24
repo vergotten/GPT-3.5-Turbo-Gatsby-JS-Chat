@@ -12,3 +12,14 @@ const config: GatsbyConfig = {
 }
 
 export default config
+
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: ["OPENAI_KEY"]
+      },
+    },
+  ],
+}

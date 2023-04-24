@@ -6,11 +6,11 @@ import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
 
-const API_KEY = "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";
 // "Explain things like you would to a 10 year old learning how to code."
 // "Explain things like you're talking to a software professional with 2 years of experience."
-const systemMessage = { //  Explain things like you're talking to a software professional with 5 years of experience.
-  "role": "system", "content": "Explain things like you're talking to a software professional with 2 years of experience."
+const systemMessage = {
+    role: "system",
+    content: "Explain things like you're talking to a software professional with 2 years of experience."
 }
 
 function DigimishkaPage() {
@@ -73,7 +73,7 @@ function DigimishkaPage() {
     {
       method: "POST",
       headers: {
-        "Authorization": "Bearer " + API_KEY,
+        "Authorization": "Bearer " + process.env.OPENAI_KEY,
         "Content-Type": "application/json"
       },
       body: JSON.stringify(apiRequestBody)
