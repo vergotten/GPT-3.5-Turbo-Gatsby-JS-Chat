@@ -92,7 +92,7 @@ function DigimishkaPage() {
     return (
         <Layout pageTitle="Chat with Digimishka">
             <div className="App">
-                <div style={{ position: "relative", height: "800px", width: "700px" }}>
+                <div style={{ position: "relative", height: "750px", width: "700px" }}>
                     <MainContainer>
                         <ChatContainer>
                             <MessageList
