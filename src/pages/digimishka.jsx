@@ -96,6 +96,7 @@ function DigimishkaPage() {
                     <MainContainer>
                         <ChatContainer>
                             <MessageList
+                                scrollBehavior="smooth"
                                 typingIndicator={isTyping ? <TypingIndicator content="Digimishka is typing" /> : null}
                             >
                                 {messages.map((message, i) => {
