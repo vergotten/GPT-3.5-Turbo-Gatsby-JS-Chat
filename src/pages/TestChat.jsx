@@ -3,7 +3,7 @@ import { ChakraProvider, theme } from "@chakra-ui/react";
 import Chat from "../components/Chat/Chat";
 import './App.css'
 
-const App = () => {
+const TestChat = () => {
   return (
     <ChakraProvider theme={theme}>
       <Chat />
@@ -11,4 +11,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default TestChat;
