@@ -35,7 +35,7 @@ const Messages = ({ messages }) => {
                 bg="blue.300"
               ></Avatar>
               <Flex
-                bg="gray.100"
+                bg="https://i.gyazo.com/45c9b7f396214bafc4a37921574f642b.jpg"
                 color="black"
                 minW="100px"
                 maxW="350px"
