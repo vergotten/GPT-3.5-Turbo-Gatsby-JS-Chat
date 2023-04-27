@@ -9,12 +9,6 @@ import Messages from "../Chat/Messages";
 const Chat = () => {
   const [messages, setMessages] = useState([
     { from: "computer", text: "Hi, I am Digimishka. Go ahead and send me a message." },
-    { from: "me", text: "Hey there" },
-    {
-      from: "computer",
-      text:
-        "Nice to meet you. You can send me message and i'll reply you with same message."
-    }
   ]);
   const [inputMessage, setInputMessage] = useState("");
 
