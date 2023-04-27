@@ -3,7 +3,7 @@ import * as React from 'react'
 import { useState } from "react";
 import Divider from "../Chat/Divider";
 import Footer from "../Chat/Footer";
-import Header from "./Chat/Header";
+import Header from "../Chat/Header";
 import Messages from "../Chat/Messages";
 
 const Chat = () => {
