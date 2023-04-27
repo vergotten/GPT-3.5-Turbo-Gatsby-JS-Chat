@@ -8,9 +8,8 @@ import Messages from "../Chat/Messages";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
-    { from: "computer", text: "Hi, My Name is HoneyChat" },
+    { from: "computer", text: "Hi, I am Digimishka. Go ahead and send me a message." },
     { from: "me", text: "Hey there" },
-    { from: "me", text: "Myself Ferin Patel" },
     {
       from: "computer",
       text:
