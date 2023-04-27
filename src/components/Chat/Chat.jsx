@@ -3,12 +3,18 @@ import * as React from 'react'
 import { useState } from "react";
 import Divider from "../Chat/Divider";
 import Footer from "../Chat/Footer";
-import Header from "../Chat/Header";
+import Header from "./Chat/Header";
 import Messages from "../Chat/Messages";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
-    { from: "computer", text: "Hi, I am Digimishka. Go ahead and send me a message." },
+    { from: "computer", text: "Hi, My Name is Digimishka. Go ahead and send me a message. " },
+    { from: "me", text: "Hey there, Digimishka! What can you do?" },
+    {
+      from: "computer",
+      text:
+        "As a chat gpt3.5-turbo model trained as assistant I can answer your questions. You can use /help command for more information."
+    }
   ]);
   const [inputMessage, setInputMessage] = useState("");
 
