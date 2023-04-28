@@ -9,7 +9,7 @@ const Footer = ({ inputMessage, setInputMessage, handleSendMessage }) => {
         border="none"
         borderRadius="none"
         _focus={{
-          border: "1px solid black"
+          border: "1px solid black",
         }}
         onKeyPress={(e) => {
           if (e.key === "Enter") {
@@ -28,7 +28,7 @@ const Footer = ({ inputMessage, setInputMessage, handleSendMessage }) => {
           color: "black",
           border: "1px solid black",
         }}
-        disabled={inputMessage.trim().length <=0}
+        disabled={inputMessage.trim().length <= 0}
         onClick={handleSendMessage}
       >
         Send
