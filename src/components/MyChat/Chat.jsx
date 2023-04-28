@@ -18,8 +18,10 @@ const MyChat = () => {
     }
   ]);
 
+  const [isTyping, setIsTyping] = useState(false);
   const [inputMessage, setInputMessage] = useState("");
 
+  {/*
   const handleSendMessage = () => {
     if (!inputMessage.trim().length) {
       return;
@@ -33,6 +35,59 @@ const MyChat = () => {
       setMessages((old) => [...old, { from: "Digimishka", text: data }]);
     }, 1000);
   };
+  */}
+
+  const handleSendMessage = async (message) => {
+    const newMessage = {
+      message,
+      direction: "outgoing",
+      sender: "user"
+    };
+
+    const newMessages = [...messages, newMessage];
+    setMessages(newMessages);
+    setIsTyping(true);
+    await processMessageToChatGPT(newMessages);
+  };
+
+  async function processMessageToChatGPT(chatMessages) {
+    let apiMessages = chatMessages.map((messageObject) => {
+      let role = "";
+      if (messageObject.sender === "Digimishka") {
+        role = "assistant";
+      } else {
+        role = "user";
+    }
+    return { role: role, content: messageObject.message }
+  });
+
+    const apiRequestBody = {
+      "model": "gpt-3.5-turbo",
+      "messages": [
+        systemMessage,
+        ...apiMessages
+      ]
+    }
+
+    await fetch("https://api.openai.com/v1/chat/completions",
+    {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + process.env.OPENAI_KEY,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(apiRequestBody)
+    }).then((data) => {
+      return data.json();
+    }).then((data) => {
+      console.log(data);
+      setMessages([...chatMessages, {
+        message: data.choices[0].message.content,
+        sender: "Digimishka"
+        }]);
+      setIsTyping(false);
+    });
+  }
 
   return (
     <Flex w="100%" h="100vh" justify="center" align="center">
