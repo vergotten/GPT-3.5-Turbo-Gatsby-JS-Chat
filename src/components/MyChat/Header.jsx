@@ -13,5 +13,5 @@ const Header = () => {
                 </Text>
                 <Text color="green.500">Online</Text>
             </Flex>
-    )
+    );
 };
