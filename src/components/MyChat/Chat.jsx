@@ -28,7 +28,7 @@ const MyChat = () => {
     }
     const data = inputMessage;
 
-    setMessages((old) => [...old, { from: "user", text: data }]);
+    setMessages((old) => [...old, { from: "user", text: data, sentTime: "just now" }]);
     setInputMessage("");
 
     setTimeout(() => {
@@ -38,14 +38,21 @@ const MyChat = () => {
   */}
 
   const handleSendMessage = async (message) => {
+    if (!inputMessage.trim().length) {
+      return;
+    }
+
+    const data = inputMessage;
+
     const newMessage = {
-      message,
+      text: data,
       direction: "outgoing",
       sender: "user"
     };
 
     const newMessages = [...messages, newMessage];
     setMessages(newMessages);
+    setInputMessage("");
     setIsTyping(true);
     await processMessageToChatGPT(newMessages);
   };
