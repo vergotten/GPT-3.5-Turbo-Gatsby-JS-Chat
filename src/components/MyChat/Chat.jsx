@@ -8,13 +8,12 @@ import Footer from "./Footer.jsx";
 
 const MyChat = () => {
   const [messages, setMessages] = useState([
-    { from: "Digimishka", text: "Hi, My Name is Digimishka. Go ahead and send me a message. ", sentTime: "just now" },
-    { from: "user", text: "Hey there, Digimishka! What can you do?", sentTime: "just now" },
+    { from: "Digimishka", text: "Hi, My Name is Digimishka. Go ahead and send me a message. },
+    { from: "user", text: "Hey there, Digimishka! What can you do?" },
     {
       from: "Digimishka",
       text:
         "As a chat gpt3.5-turbo model trained as assistant I can answer your questions. You can use /help command for more information.",
-      sentTime: "just now"
     }
   ]);
 
@@ -28,7 +27,7 @@ const MyChat = () => {
     }
     const data = inputMessage;
 
-    setMessages((old) => [...old, { from: "user", text: data, sentTime: "just now" }]);
+    setMessages((old) => [...old, { from: "user", text: data }]);
     setInputMessage("");
 
     setTimeout(() => {
@@ -89,8 +88,8 @@ const MyChat = () => {
   }).then((data) => {
     console.log(data);
     setMessages([...chatMessages, {
-      message: data.choices[0].message.content,
-      sender: "Digimishka"
+      text: data.choices[0].message.content,
+      from: "Digimishka"
       }]);
     setIsTyping(false);
   });
