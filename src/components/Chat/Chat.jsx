@@ -1,10 +1,10 @@
 import { Flex } from "@chakra-ui/react";
 import * as React from 'react';
 import { useState } from "react";
-import Header from "../Chat/Header.jsx";
-import Divider from "../Chat/Divider.jsx";
-import Messages from "../Chat/Messages.jsx";
-import Footer from "../Chat/Footer.jsx";
+import Header from "../components/Chat/Header.jsx";
+import Divider from "../components/Chat/Divider.jsx";
+import Messages from "../components/Chat/Messages.jsx";
+import Footer from "../components/Chat/Footer.jsx";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
