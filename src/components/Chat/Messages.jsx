@@ -11,7 +11,7 @@ const Messages = ({ messages }) => {
   return (
     <Flex w="100%" h="80%" overflowY="scroll" flexDirection="column" p="3">
       {messages.map((item, index) => {
-        if (item.from === "user") {
+        if (item.from === "me") {
           return (
             <Flex key={index} w="100%" justify="flex-end">
               <Flex
@@ -30,8 +30,8 @@ const Messages = ({ messages }) => {
           return (
             <Flex key={index} w="100%">
               <Avatar
-                name="Digimishka"
-                src="https://i.gyazo.com/01022bae8569c411593ef308d1f8eb56.jpg"
+                name="Computer"
+                src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
                 bg="blue.300"
               ></Avatar>
               <Flex
