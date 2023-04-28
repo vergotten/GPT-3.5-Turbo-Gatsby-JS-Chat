@@ -41,10 +41,8 @@ const MyChat = () => {
       return;
     }
 
-    const data = inputMessage;
-
     const newMessage = {
-      text: data,
+      message,
       direction: "outgoing",
       sender: "user"
     };
