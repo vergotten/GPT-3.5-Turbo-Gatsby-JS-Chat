@@ -24,11 +24,11 @@ const Chat = () => {
     }
     const data = inputMessage;
 
-    setMessages((old) => [...old, { from: "me", text: data }]);
+    setMessages((old) => [...old, { from: "user", text: data }]);
     setInputMessage("");
 
     setTimeout(() => {
-      setMessages((old) => [...old, { from: "computer", text: data }]);
+      setMessages((old) => [...old, { from: "Digimishka", text: data }]);
     }, 1000);
   };
 

@@ -20,22 +20,6 @@ const MyChat = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [inputMessage, setInputMessage] = useState("");
 
-  {/*
-  const handleSendMessage = () => {
-    if (!inputMessage.trim().length) {
-      return;
-    }
-    const data = inputMessage;
-
-    setMessages((old) => [...old, { from: "user", text: data }]);
-    setInputMessage("");
-
-    setTimeout(() => {
-      setMessages((old) => [...old, { from: "Digimishka", text: data }]);
-    }, 1000);
-  };
-  */}
-
   const handleSendMessage = async (message) => {
     if (!inputMessage.trim().length) {
       return;
