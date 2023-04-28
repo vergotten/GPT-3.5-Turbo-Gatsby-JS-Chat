@@ -1,18 +1,18 @@
 import { Flex } from "@chakra-ui/react";
 import * as React from 'react';
 import { useState } from 'react';
-import Header from "../MyChat/Header.jsx";
-import Header from "../MyChat/Divider.jsx";
-import Header from "../MyChat/Messages.jsx";
-import Header from "../MyChat/Footer.jsx";
+import Header from "./Header.jsx";
+import Header from "./Divider.jsx";
+import Header from "./Messages.jsx";
+import Header from "./Footer.jsx";
 
 const MyChat = () => {
   const [messages, setMessages] = useState([
-    { from: "Digimishka", message: "Hi, My Name is Digimishka. Go ahead and send me a message. ", sentTime: "just now" },
-    { from: "user", message: "Hey there, Digimishka! What can you do?", sentTime: "just now" },
+    { from: "Digimishka", text: "Hi, My Name is Digimishka. Go ahead and send me a message. ", sentTime: "just now" },
+    { from: "user", text: "Hey there, Digimishka! What can you do?", sentTime: "just now" },
     {
       from: "Digimishka",
-      message:
+      text:
         "As a chat gpt3.5-turbo model trained as assistant I can answer your questions. You can use /help command for more information.",
       sentTime: "just now"
     }
