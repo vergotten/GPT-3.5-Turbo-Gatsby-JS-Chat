@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import * as React from 'react'
+import * as React from 'react';
 import { useState } from "react";
 import Header from "../Chat/Header.jsx";
 import Divider from "../Chat/Divider.jsx";
@@ -14,7 +14,7 @@ const Chat = () => {
       from: "Digimishka",
       text:
         "As a chat gpt3.5-turbo model trained as assistant I can answer your questions. You can use /help command for more information.",
-    }
+    },
   ]);
   const [inputMessage, setInputMessage] = useState("");
 

@@ -14,7 +14,7 @@ const MyChat = () => {
       from: "Digimishka",
       text:
         "As a chat gpt3.5-turbo model trained as assistant I can answer your questions. You can use /help command for more information.",
-    }
+    },
   ]);
 
   const [isTyping, setIsTyping] = useState(false);
