@@ -1,6 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import * as React from 'react';
-import { useState } from "react";
+import React, { useState } from "react";
 import Header from "../Chat/Header";
 import Divider from "../Chat/Divider";
 import Messages from "../Chat/Messages";
