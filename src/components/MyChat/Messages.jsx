@@ -31,7 +31,7 @@ const Messages = ({ messages }) => {
             <Flex key={index} w="100%">
               <Avatar
                 name="Digimishka"
-                scr="https://i.gyazo.com/01022bae8569c411593ef308d1f8eb56.jpg"
+                src="https://i.gyazo.com/01022bae8569c411593ef308d1f8eb56.jpg"
                 bg="blue.300"
               ></Avatar>
               <Flex
