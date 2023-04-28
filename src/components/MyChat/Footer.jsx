@@ -24,9 +24,9 @@ const Footer = ({ inputMessage, setInputMessage, handleSendMessage }) => {
         color="white"
         borderRadius="none"
         _hover={{
-          bg: "white"
-          color: "black"
-          border: "1px solid black"
+          bg: "white",
+          color: "black",
+          border: "1px solid black",
         }}
         disabled={inputMessage.trim().length <=0}
         onClick={handleSendMessage}
