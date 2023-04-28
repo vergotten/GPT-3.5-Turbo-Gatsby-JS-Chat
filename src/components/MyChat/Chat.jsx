@@ -1,10 +1,10 @@
 import { Flex } from "@chakra-ui/react";
 import * as React from 'react';
 import { useState } from 'react';
-import Header from "./Header.jsx";
-import Header from "./Divider.jsx";
-import Header from "./Messages.jsx";
-import Header from "./Footer.jsx";
+import Header from "../MyChat/Header.jsx";
+import Header from "../MyChat/Divider.jsx";
+import Header from "../MyChat/Messages.jsx";
+import Header from "../MyChat/Footer.jsx";
 
 const MyChat = () => {
   const [messages, setMessages] = useState([
@@ -30,7 +30,7 @@ const MyChat = () => {
     setInputMessage("");
 
     setTimeout(() => {
-      setMessages((old) => [...old, {from: "Digimishka", text: data }]);
+      setMessages((old) => [...old, { from: "Digimishka", text: data }]);
     }, 1000);
   };
 
