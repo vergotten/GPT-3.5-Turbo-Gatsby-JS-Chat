@@ -8,13 +8,12 @@ import Footer from "./Footer.jsx";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
-    { from: "computer", text: "Hi, My Name is HoneyChat" },
-    { from: "me", text: "Hey there" },
-    { from: "me", text: "Myself Ferin Patel" },
+    { from: "Digimishka", text: "Hi, My Name is Digimishka. Go ahead and send me a message. },
+    { from: "user", text: "Hey there, Digimishka! What can you do?" },
     {
-      from: "computer",
+      from: "Digimishka",
       text:
-        "Nice to meet you. You can send me message and i'll reply you with same message."
+        "As a chat gpt3.5-turbo model trained as assistant I can answer your questions. You can use /help command for more information.",
     }
   ]);
   const [inputMessage, setInputMessage] = useState("");
