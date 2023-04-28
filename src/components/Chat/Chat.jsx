@@ -7,7 +7,7 @@ import Messages from "../components/Chat/Messages";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
-    { from: "Digimishka", text: "Hi, My Name is Digimishka. Go ahead and send me a message. },
+    { from: "Digimishka", text: "Hi, My Name is Digimishka. Go ahead and send me a message." },
     { from: "user", text: "Hey there, Digimishka! What can you do?" },
     {
       from: "Digimishka",
