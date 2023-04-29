@@ -98,9 +98,9 @@ const Chat = () => {
   }
 
   return (
-    <Flex w="100%" h="100vh" justify="center" align="center">
-      <Flex w={["100%", "100%", "40%"]} h="90%" flexDir="column">
-        <Header />
+    <Flex w="100%" h="100vh" justify="center" align="center" bgImage="url('https://i.gyazo.com/9695bcbb58276e05aea226fb8c57129d.jpg')">
+      <Flex w={["100%", "100%", "40%"]} h="90%" flexDir="column" bgImage="url('https://i.gyazo.com/aa17359abea8372481855e985ae84f86.jpg')">
+        <Header/>
         <Divider />
         <Messages messages={messages} />
         <Divider />

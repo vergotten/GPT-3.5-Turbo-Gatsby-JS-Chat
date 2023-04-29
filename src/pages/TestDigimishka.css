@@ -1,19 +1,19 @@
-.TestDigimishka {
+.Chat {
   text-align: center;
 }
 
-.TestDigimishka-logo {
+.Chat-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .TestDigimishka-logo {
+  .Chat-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.TestDigimishka-header {
+.Chat-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,11 +24,11 @@
   color: white;
 }
 
-.TestDigimishka-link {
+.Chat-link {
   color: #61dafb;
 }
 
-@keyframes TestDigimishka-logo-spin {
+@keyframes MyChat-logo-spin {
   from {
     transform: rotate(0deg);
   }
