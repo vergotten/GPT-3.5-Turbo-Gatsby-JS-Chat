@@ -97,7 +97,7 @@ const Chat = () => {
         />
       </Flex>
     </Flex>
-  );
-};
+  )
+}
 
 export default Chat;
