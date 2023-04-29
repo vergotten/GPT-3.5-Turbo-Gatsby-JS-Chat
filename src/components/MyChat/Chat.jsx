@@ -20,20 +20,27 @@ const Chat = () => {
 
   const handleSendMessage = () => {
     if (!inputMessage.trim().length) {
-      return;
+      return;  // if empty message received return
     }
-    const message = inputMessage;
+    const data = inputMessage;
 
-    const newMessage = {
-      message,
-      direction: "outgoing",
-      from: "user",
-    };
+    setMessages((old) => [...old, {from: "user", text: data }]);
+      setInputMessage("");
 
-    const newMessages = [...messages, newMessage]; // all the old messages, + the new message
+    /*
+    setTimeout(() => {
+      setMessages((old => [...old, { from: "Digimishka", text: data }]);
+    }, 1000);
+    */
 
-    // update our messages state
-    setMessages(newMessages);
+    /*
+    setMessages((old) => [...old, { from: "user", text: data }]);
+      setInputMessage("");
+
+    setTimeout(() => {
+      setMessages((old) => [...old, { from: "Digimishka", text: data }]);
+    }, 1000);
+    */
 
     // set a typing indicator (Digimishka is typing)
     setIsTyping(true);
