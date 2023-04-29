@@ -66,7 +66,7 @@ const Chat = () => {
             systemMessage,  // The system message DEFINES the logic of our chatGPT
             ...apiMessages // The messages from our chat with ChatGPT
       ]
-    }
+    };
 
     await fetch("https://api.openai.com/v1/chat/completions",
     {
@@ -86,7 +86,7 @@ const Chat = () => {
       }]);
       setIsTyping(false);
     });
-  }
+  };
 
   return (
     <Flex w="100%" h="100vh" justify="center" align="center">
@@ -103,6 +103,6 @@ const Chat = () => {
       </Flex>
     </Flex>
   )
-}
+};
 
 export default Chat;
