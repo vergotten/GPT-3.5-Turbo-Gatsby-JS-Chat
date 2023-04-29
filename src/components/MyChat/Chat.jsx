@@ -5,6 +5,15 @@ import Footer from "../MyChat/Footer";
 import Header from "../MyChat/Header";
 import Messages from "../MyChat/Messages";
 
+// Initial system message to determine ChatGPT functionality
+// How it responds, how it talks, etc.
+// "Explain things like you would to a 10 year old learning how to code."
+// "Explain things like you're talking to a software professional with 2 years of experience."
+const systemMessage = {
+    role: "system",
+    content: "Explain things like you're talking to a software professional with 2 years of experience."
+}
+
 const Chat = () => {
   const [messages, setMessages] = useState([
     { from: "Digimishka", text: "Hi, My Name is Digimishka. Go ahead and send me a message." },
@@ -18,35 +27,24 @@ const Chat = () => {
   const [inputMessage, setInputMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
-  const handleSendMessage = () => {
-    if (!inputMessage.trim().length) {
-      return;  // if empty message received return
-    }
-    const data = inputMessage;
+  const handleSendMessage = async (message) => {
+    const newMessage = {
+            text,
+            direction: 'outgoing',
+            from: "user"
+        };
 
-    setMessages((old) => [...old, {from: "user", text: data }]);
-      setInputMessage("");
+        const newMessages = [...messages, newMessage]; // all the old messages, + the new message
 
-    /*
-    setTimeout(() => {
-      setMessages((old => [...old, { from: "Digimishka", text: data }]);
-    }, 1000);
-    */
+        // update our messages state
+        setMessages(newMessages);
 
-    /*
-    setMessages((old) => [...old, { from: "user", text: data }]);
-      setInputMessage("");
+        // set a typing indicator (Digimishka is typing)
+        setIsTyping(true);
 
-    setTimeout(() => {
-      setMessages((old) => [...old, { from: "Digimishka", text: data }]);
-    }, 1000);
-    */
-
-    // set a typing indicator (Digimishka is typing)
-    setIsTyping(true);
-
-    // process message to Digimishka (send it over and see the response)
-    await processMessageToChatGPT(newMessages);
+        // process message to Digimishka (send it over and see the response)
+        await processMessageToChatGPT(newMessages);
+    };
   };
 
   async function processMessageToChatGPT(chatMessages) { // chatMessages is an array of messages
@@ -61,7 +59,7 @@ const Chat = () => {
       } else {
         role = "user";
       }
-    return { role: role, content: messageObject.message }
+    return { role: role, content: messageObject.text }
     });
   };
 
