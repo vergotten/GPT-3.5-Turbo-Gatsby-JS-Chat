@@ -54,7 +54,7 @@ const Chat = () => {
       } else {
         role = "user";
       }
-    return { role: role, content: messageObject.message }
+      return { role: role, content: messageObject.message }
     });
 
     // Get the request body set up with the model we plan to use
