@@ -18,7 +18,12 @@ const Chat = () => {
   const [inputMessage, setInputMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
-  const handleSendMessage = (message) => {
+  const handleSendMessage = () => {
+    if (!inputMessage.trim().length) {
+      return;
+    }
+    const message = inputMessage;
+
     const newMessage = {
       message,
       direction: "outgoing",
@@ -52,35 +57,35 @@ const Chat = () => {
     return { role: role, content: messageObject.message }
     });
 
-  // Get the request body set up with the model we plan to use
-  // and the messages which we formatted above. We add a system message in the front to'
-  // determine how we want chatGPT to act.
-  const apiRequestBody = {
-      "model": "gpt-3.5-turbo",
-      "messages": [
-          systemMessage,  // The system message DEFINES the logic of our chatGPT
-          ...apiMessages // The messages from our chat with ChatGPT
-    ]
-  }
+    // Get the request body set up with the model we plan to use
+    // and the messages which we formatted above. We add a system message in the front to'
+    // determine how we want chatGPT to act.
+    const apiRequestBody = {
+        "model": "gpt-3.5-turbo",
+        "messages": [
+            systemMessage,  // The system message DEFINES the logic of our chatGPT
+            ...apiMessages // The messages from our chat with ChatGPT
+      ]
+    }
 
-  await fetch("https://api.openai.com/v1/chat/completions",
-  {
-    method: "POST",
-    headers: {
-      "Authorization": "Bearer " + process.env.OPENAI_KEY,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(apiRequestBody)
-  }).then((data) => {
-      return data.json();
-  }).then((data) => {
-    console.log(data);
-    setMessages([...chatMessages, {
-      message: data.choices[0].message.content,
-      sender: "Digimishka"
-    }]);
-    setIsTyping(false);
-  });
+    await fetch("https://api.openai.com/v1/chat/completions",
+    {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + process.env.OPENAI_KEY,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(apiRequestBody)
+    }).then((data) => {
+        return data.json();
+    }).then((data) => {
+      console.log(data);
+      setMessages([...chatMessages, {
+        message: data.choices[0].message.content,
+        sender: "Digimishka"
+      }]);
+      setIsTyping(false);
+    });
   }
 
   return (
