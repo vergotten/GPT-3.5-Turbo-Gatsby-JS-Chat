@@ -65,39 +65,39 @@ const Chat = () => {
       } else {
         role = "user";
       }
-    return { role: role, content: messageObject.text }
+      return { role: role, content: messageObject.text }
     });
-  };
 
-  // Get the request body set up with the model we plan to use
-  // and the messages which we formatted above. We add a system message in the front to'
-  // determine how we want chatGPT to act.
-  const apiRequestBody = {
+    // Get the request body set up with the model we plan to use
+    // and the messages which we formatted above. We add a system message in the front to'
+    // determine how we want chatGPT to act.
+    const apiRequestBody = {
       "model": "gpt-3.5-turbo",
       "messages": [
-          systemMessage,  // The system message DEFINES the logic of our chatGPT
-          ...apiMessages // The messages from our chat with ChatGPT
-    ]
-  };
+        systemMessage,  // The system message DEFINES the logic of our chatGPT
+        ...apiMessages // The messages from our chat with ChatGPT
+      ]
+    };
 
-  await fetch("https://api.openai.com/v1/chat/completions",
-  {
-    method: "POST",
-    headers: {
-      "Authorization": "Bearer " + process.env.OPENAI_KEY,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(apiRequestBody)
-  }).then((data) => {
+    await fetch("https://api.openai.com/v1/chat/completions",
+      {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + process.env.OPENAI_KEY,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(apiRequestBody)
+    }).then((data) => {
       return data.json();
-  }).then((data) => {
-    console.log(data);
-    setMessages([...chatMessages, {
-      text: data.choices[0].message.content,
-      from: "Digimishka"
-    }]);
-    setIsTyping(false);
-  });
+    }).then((data) => {
+      console.log(data);
+      setMessages([...chatMessages, {
+        text: data.choices[0].message.content,
+        from: "Digimishka"
+      }]);
+      setIsTyping(false);
+    });
+  };
 
   return (
     <Flex w="100%" h="100vh" justify="center" align="center">
