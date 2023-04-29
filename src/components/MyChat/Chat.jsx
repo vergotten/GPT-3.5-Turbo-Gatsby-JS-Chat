@@ -27,7 +27,7 @@ const Chat = () => {
     const newMessage = {
       message,
       direction: "outgoing",
-      sender: "user",
+      from: "user",
     };
 
     const newMessages = [...messages, newMessage]; // all the old messages, + the new message
@@ -49,7 +49,7 @@ const Chat = () => {
 
     let apiMessages = chatMessages.map((messageObject) => {
       let role = "";
-      if (messageObject.sender === "Digimishka") {
+      if (messageObject.from === "Digimishka") {
         role = "assistant";
       } else {
         role = "user";
@@ -81,8 +81,8 @@ const Chat = () => {
     }).then((data) => {
       console.log(data);
       setMessages([...chatMessages, {
-        message: data.choices[0].message.content,
-        sender: "Digimishka"
+        text: data.choices[0].message.content,
+        from: "Digimishka"
       }]);
       setIsTyping(false);
     });
