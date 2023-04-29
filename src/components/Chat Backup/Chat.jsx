@@ -1,21 +1,19 @@
 import { Flex } from "@chakra-ui/react";
-import * as React from 'react';
-import { useState } from "react";
-import Divider from "../components/Chat Backup/Divider";
-import Footer from "../components/Chat Backup/Footer";
-import Header from "../components/Chat Backup/Header";
-import Messages from "../components/Chat Backup/Messages";
+import React, { useState } from "react";
+import Divider from "../MyChat/Divider";
+import Footer from "../MyChat/Footer";
+import Header from "../MyChat/Header";
+import Messages from "../MyChat/Messages";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
-    { from: "computer", text: "Hi, My Name is HoneyChat" },
-    { from: "me", text: "Hey there" },
-    { from: "me", text: "Myself Ferin Patel" },
+    { from: "Digimishka", text: "Hi, My Name is Digimishka. Go ahead and send me a message." },
+    { from: "user", text: "Hey there, Digimishka! What can you do?" },
     {
-      from: "computer",
+      from: "Digimishka",
       text:
-        "Nice to meet you. You can send me message and i'll reply you with same message."
-    }
+        "As a chat gpt3.5-turbo model trained as assistant I can answer your questions. You can use /help command for more information.",
+    },
   ]);
   const [inputMessage, setInputMessage] = useState("");
 
@@ -25,11 +23,11 @@ const Chat = () => {
     }
     const data = inputMessage;
 
-    setMessages((old) => [...old, { from: "me", text: data }]);
+    setMessages((old) => [...old, { from: "user", text: data }]);
     setInputMessage("");
 
     setTimeout(() => {
-      setMessages((old) => [...old, { from: "computer", text: data }]);
+      setMessages((old) => [...old, { from: "Digimishka", text: data }]);
     }, 1000);
   };
 

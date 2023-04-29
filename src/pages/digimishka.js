@@ -5,7 +5,8 @@ import './digimishka.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
-
+// Initial system message to determine ChatGPT functionality
+// How it responds, how it talks, etc.
 // "Explain things like you would to a 10 year old learning how to code."
 // "Explain things like you're talking to a software professional with 2 years of experience."
 const systemMessage = {
@@ -35,8 +36,6 @@ function DigimishkaPage() {
         // update our messages state
         setMessages(newMessages);
 
-        // Initial system message to determine ChatGPT functionality
-        // How it responds, how it talks, etc.
         // set a typing indicator (Digimishka is typing)
         setIsTyping(true);
         // process message to Digimishka (send it over and see the response)
