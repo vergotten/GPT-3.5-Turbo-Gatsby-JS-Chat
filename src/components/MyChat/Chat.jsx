@@ -27,23 +27,29 @@ const Chat = () => {
   const [inputMessage, setInputMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
-  const handleSendMessage = async (message) => {
+  const handleSendMessage = async () => {
+    if (!inputMessage.trim().length) {
+      return;
+    }
+    const data = inputMessage;
+
     const newMessage = {
-            text,
-            direction: 'outgoing',
-            from: "user"
-        };
+      text: data,
+      direction: 'outgoing',
+      from: "user"
+    };
 
-        const newMessages = [...messages, newMessage]; // all the old messages, + the new message
+    const newMessages = [...messages, newMessage]; // all the old messages, + the new message
 
-        // update our messages state
-        setMessages(newMessages);
+    // update our messages state
+    setMessages(newMessages);
+    setInputMessage("");
 
-        // set a typing indicator (Digimishka is typing)
-        setIsTyping(true);
+    // set a typing indicator (Digimishka is typing)
+    setIsTyping(true);
 
-        // process message to Digimishka (send it over and see the response)
-        await processMessageToChatGPT(newMessages);
+    // process message to Digimishka (send it over and see the response)
+    await processMessageToChatGPT(newMessages);
     };
   };
 
