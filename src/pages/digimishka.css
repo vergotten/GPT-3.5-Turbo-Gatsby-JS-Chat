@@ -1,19 +1,19 @@
-.Digimishka {
+.digimishka {
   text-align: center;
 }
 
-.Digimishka-logo {
+.digimishka-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .Digimishka-logo {
+  .digimishka-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.Digimishka-header {
+.digimishka-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,7 +24,7 @@
   color: white;
 }
 
-.Digimishka-link {
+.digimishka-link {
   color: #61dafb;
 }
 
