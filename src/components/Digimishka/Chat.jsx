@@ -1,9 +1,9 @@
 import { Flex } from "@chakra-ui/react";
 import React, { useState } from "react";
-import Divider from "../MyChat/Divider";
-import Footer from "../MyChat/Footer";
-import Header from "../MyChat/Header";
-import Messages from "../MyChat/Messages";
+import Divider from "../Digimishka/Divider";
+import Footer from "../Digimishka/Footer";
+import Header from "../Digimishka/Header";
+import Messages from "../Digimishka/Messages";
 
 // Initial system message to determine ChatGPT functionality
 // How it responds, how it talks, etc.
