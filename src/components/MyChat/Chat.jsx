@@ -22,10 +22,10 @@ const Chat = () => {
     const newMessage = {
       message,
       direction: "outgoing",
-      sender: "user"
+      sender: "user",
     };
 
-    const newMessages = [...messages, newMessage] // all the old messages, + the new message
+    const newMessages = [...messages, newMessage]; // all the old messages, + the new message
 
     // update our messages state
     setMessages(newMessages);
