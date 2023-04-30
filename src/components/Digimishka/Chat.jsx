@@ -111,6 +111,8 @@ const Chat = () => {
             align="center"
             position="relative"
             bgImage="url('https://i.gyazo.com/dccd70f7e75ab16fed5e7a941e5e7cf1.png')"
+            bgAttachment="fixed"
+            bgPosition="center"
       >
 
         <Header/>
