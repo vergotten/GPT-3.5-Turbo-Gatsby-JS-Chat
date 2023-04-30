@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Divider from "../Digimishka/Divider";
 import Footer from "../Digimishka/Footer";
@@ -98,9 +98,22 @@ const Chat = () => {
   }
 
   return (
-    <Flex w="100%" h="100vh" justify="center" align="center">
-      <Flex w={["100%", "100%", "40%"]} h="90%" flexDir="column">
-        <Header />
+    <Flex w="100%"
+          h="100vh"
+          justify="center"
+          align="center"
+          bgImage="url('https://i.gyazo.com/5240e9ab280e65dec892cecba4e027b8.jpg')"
+          bgSize="100%"
+    >
+      <Flex w={["100%", "100%", "40%"]}
+            h="90%"
+            flexDir="column"
+            align="center"
+            position="relative"
+            bgImage="url('https://i.gyazo.com/dccd70f7e75ab16fed5e7a941e5e7cf1.png')"
+      >
+
+        <Header/>
         <Divider />
         <Messages messages={messages} />
         <Divider />

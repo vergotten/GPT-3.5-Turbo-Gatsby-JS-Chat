@@ -9,7 +9,12 @@ const Messages = ({ messages }) => {
   };
 
   return (
-    <Flex w="100%" h="80%" overflowY="scroll" flexDirection="column" sx={{ "&::-webkit-scrollbar": { width: "6px", height: "6px", backgroundColor: "#000034", }, "&::-webkit-scrollbar-thumb": { backgroundColor: "gray.500", borderRadius: "6px", }, }}>
+    <Flex w="100%"
+          h="80%"
+          overflowY="scroll"
+          flexDirection="column"
+          sx={{ "&::-webkit-scrollbar": { width: "6px", height: "6px", backgroundColor: "#000034", },
+                "&::-webkit-scrollbar-thumb": { backgroundColor: "gray.500", borderRadius: "6px", }, }}>
       {messages.map((item, index) => {
         if (item.from === "user") {
           return (
