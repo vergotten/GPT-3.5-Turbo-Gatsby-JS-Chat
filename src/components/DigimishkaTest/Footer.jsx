@@ -3,7 +3,7 @@ import { Flex, Input, Button } from "@chakra-ui/react";
 
 const Footer = ({ inputMessage, setInputMessage, handleSendMessage }) => {
   return (
-    <Flex w="97%" mt="5" bg="#000000">
+    <Flex w="100%" mt="5" bg="#000000">
       <Input
         color="white"
         placeholder="Type Something..."
