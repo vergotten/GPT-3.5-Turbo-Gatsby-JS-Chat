@@ -37,4 +37,4 @@ This is [Gatsby](https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&
 
 # Chat example
 
-<video src="https://i.gyazo.com/ed5d073a033aa67f2d9c9e7e25eb846a.mp4"></video>
+![Chat example](https://i.gyazo.com/b43e22b623a0a015a57a8183f6008219.gif)
