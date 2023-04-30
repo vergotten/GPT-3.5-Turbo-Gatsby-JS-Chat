@@ -35,11 +35,6 @@ This is [Gatsby](https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&
     - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
     - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-## 🚀 Quick start (Netlify)
+# Chat example
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
-#   g a t s b y _ r e a c t _ t e s t 
- 
- 
+<video src="https://i.gyazo.com/ed5d073a033aa67f2d9c9e7e25eb846a.mp4"></video>
