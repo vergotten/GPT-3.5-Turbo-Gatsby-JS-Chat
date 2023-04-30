@@ -102,8 +102,9 @@ const Chat = () => {
           h="100vh"
           justify="center"
           align="center"
-          bgImage="url('https://i.gyazo.com/5240e9ab280e65dec892cecba4e027b8.jpg')"
+          bgImage="url('https://i.gyazo.com/594a03954d22d0cf8b6d129b188cb430.png')"
           bgSize="100%"
+
     >
       <Flex w={["100%", "100%", "40%"]}
             h="90%"
@@ -111,6 +112,8 @@ const Chat = () => {
             align="center"
             position="relative"
             bgImage="url('https://i.gyazo.com/dccd70f7e75ab16fed5e7a941e5e7cf1.png')"
+            bgAttachment="fixed"
+            bgPosition="center"
       >
 
         <Header/>

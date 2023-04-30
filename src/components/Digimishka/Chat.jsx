@@ -102,7 +102,7 @@ const Chat = () => {
           h="100vh"
           justify="center"
           align="center"
-          bgImage="url('https://i.gyazo.com/5240e9ab280e65dec892cecba4e027b8.jpg')"
+          bgImage="url('https://i.gyazo.com/594a03954d22d0cf8b6d129b188cb430.png')"
           bgSize="100%"
     >
       <Flex w={["100%", "100%", "40%"]}
