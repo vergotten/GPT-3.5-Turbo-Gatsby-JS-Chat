@@ -48,10 +48,14 @@ const Chat = () => {
     setIsTyping(true);
 
     // process message to Digimishka (send it over and see the response)
-    await processMessageToChatGPT(newMessages);
+    await processMessageToChatGPT3_5(newMessages);
   };
 
-  async function processMessageToChatGPT(chatMessages) { // chatMessages is an array of messages
+  //async function processMessageToChatGPT4(chatMessages) {
+    //
+  //};
+
+  async function processMessageToChatGPT3_5(chatMessages) { // chatMessages is an array of messages
     // Format messages for chatGPT API
     // API is expecting objects in format of { role: "user" or "assistant", "content": "message here"}
     // So we need to reformat
